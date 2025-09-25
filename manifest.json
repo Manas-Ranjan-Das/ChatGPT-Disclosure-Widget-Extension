@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "ChatGPT Disclosure Widget Extension",
+  "version": "1.0",
+  "description": "ChatGPT Disclosure Widget Extension",
+  "permissions": ["scripting", "activeTab"],
+  "action": {
+    "default_icon": {
+      "128": "icons/icon128.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://chatgpt.com/**"],
+      "js": ["content.js"]
+    }
+  ]
+}
